@@ -13,61 +13,6 @@ If the age is not mentioned in the dialogue, please present the following:
 Dialogue:
 {Dialogue} [/INST]"""
 
-ExtractionPropmt = """<s> [INST] Below is an article related to light therapy
-Please extract the entities and the relations between them.
-Here are the entity types:
-- Treatment
-- Symptom
-- Disease
-- Drug
-- SideEffect
-- Procedure
-- Test
-- Anatomy
-- Route
-- Frequency
-- Duration
-- Severity
-Here are the Entities:
-{entities}
-Here are the Relations:
-- Treats
-- Causes
-- Prevents
-- Diagnoses
-- Tests
-- Affects
-- Indicates
-- Involves
-- Upregulates
-- Downregulates
-- AssociatedWith
-When presenting the extracted entities and relations, please use the following format
-{{
-    "entities": [
-        {{
-            "entityType": <entityType>,
-            "entity": <entity>
-        }},
-        ...
-    ],
-    "relations": [
-        {{
-            "relation": <relation>,
-            "entity1": <entity1>,
-            "entity2": <entity2>
-        }},
-        ...
-    ]
-}}
-if there are no entities or relations, please present the following:
-{{
-    "entities": [],
-    "relations": []
-}}
-Article:
-{Article} [/INST]"""
-
 GenderPrompt = """{Introduction}
 Please extract the gender of the person speaking in the dialogue.
 When presenting the extracted gender, strictly use the following format:
